@@ -1,39 +1,38 @@
-# Zippee OMS Dashboard V30
+# Zippee Ops Command Center v34 Fixed
 
-**Last Mile Teams & Ops** — Created by **Naveen Kashyap** (Fleet Manager | Manager, Central Operations · Shiway – Zippee last_mails team)
+**Last Mile Teams & Ops** — Created by **Naveen Kashyap** (Fleet Manager | Manager, Central Operations · Shiway – Zippee)
 
-## Two Links (jaise aapne maanga)
-
-### 1. Team Working Link (Live Dashboard)
-GitHub Pages enable karne ke baad live link:
+## Live link
 **https://kashyapfinance1988-tech.github.io/zippee-oms-dashboard/**
 
-Team members is link se CSV upload karke daily kaam kar sakte hain. Coding ki zaroorat nahi.
-
-### 2. Change / Edit Link (Source Code – badlav ke liye)
+## Source / edits
 **https://github.com/kashyapfinance1988-tech/zippee-oms-dashboard**
 
-Yahan se koi bhi change (badlav) kar sakte ho — HTML edit, naya version upload, logo change etc. Team ka kaam nahi rukega kyunki live site alag rehti hai.
+## v34 Fixed (11 Nov 2026)
+- Tata 1MG MALAD Mumbai warehouse auto-filtered from CSV
+- Ozi Noida Sec 1 merged into **Ozi Bisrakh** (same hub)
+- Ghaziabad / Gitab hub shows as **Ghaziabad SDD (Dilshad Garden)**
+- OZI planned riders updated from 11-Nov shift roster
+- Background poster support (`zippee_lastmile_bg.png`)
+- GitHub button points to this repo
 
-## Live Link kaise on karein (GitHub Pages)
-1. Repo kholo: https://github.com/kashyapfinance1988-tech/zippee-oms-dashboard
-2. **Settings** → left me **Pages**
-3. Source: **Deploy from a branch**
-4. Branch: **main**  +  folder **/ (root)**  → **Save**
-5. 1-2 minute baad live link chal jayega.
+## Files to upload (root)
+1. `index.html` — full dashboard (or keep redirect + `Shiway_Zippee_Ops_v34_Fixed.html`)
+2. `zippee_lastmile_bg.png` — background image (same folder)
 
-## Important
-- `index.html` file upload karna hai root me (main dashboard).
-- File badi hai (~800 KB), isliye GitHub website se upload karna best hai:
-  1. Repo me jao
-  2. **Add file** → **Upload files**
-  3. Apna `Zippee_OMS_Dashboard_V30_Naveen_Fancy.html` rename karke `index.html` bana ke upload karo
-  4. Commit changes
+### Upload steps
+1. Repo → **Add file** → **Upload files**
+2. Drop `Shiway_Zippee_Ops_v34_Fixed.html` and `zippee_lastmile_bg.png`
+3. Commit to `main`
+4. Optional: rename fixed HTML to `index.html` for direct live load
+
+### GitHub Pages
+Settings → Pages → Deploy from branch **main** / **(root)** → Save
 
 ## Usage
-1. Live link open karo
-2. CSV upload karo
-3. Filters, EOD WhatsApp summary, Rider productivity, Pending aging, etc. use karo
+1. Open live link
+2. Upload Detailed Report CSV
+3. Use Hub summary, EOD WA, OMS, filters
 
 ---
-© 2026 Zippee Operations Suite — Naveen Kashyap | All Rights Reserved.
+© 2026 Zippee Operations Suite — Naveen Kashyap
