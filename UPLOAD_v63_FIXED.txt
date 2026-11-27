@@ -1,0 +1,16 @@
+UPLOAD INSTRUCTIONS
+====================
+1. Download the fixed file from the chat (v63_absent_riders_FIXED.html)
+2. Rename it to: Zippee_Command_Center_v63_FIXED.html
+3. Go to: https://github.com/kashyapfinance1988-tech/zippee-oms-dashboard
+4. Click "Add file" -> "Upload files"
+5. Drop the file and commit to main
+
+index.html already redirects to Zippee_Command_Center_v63_FIXED.html
+
+After upload, open:
+https://kashyapfinance1988-tech.github.io/zippee-oms-dashboard/
+
+Fixes included:
+- Absent Riders (ID match, validDays, null-safe)
+- TATA 1MG Canter: Lado Sarai key, actual from ridersForHub, D0 formula, planned defaults
