@@ -5,51 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Zippee Ops Command Center v63 FIXED</title>
 <style>
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
-background:linear-gradient(135deg,#0b1f3a,#0f766e);color:#fff;font-family:Inter,system-ui,sans-serif}
-#box{text-align:center;padding:24px}
-#t{font-size:22px;font-weight:800;letter-spacing:-.02em}
-#s{margin-top:10px;opacity:.85;font-size:14px}
-.err{color:#fecaca!important}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0b1f3a,#0f766e);color:#fff;font-family:Inter,system-ui,sans-serif;text-align:center;padding:24px}
+h1{font-size:24px;margin-bottom:12px}
+p{opacity:.9;max-width:480px;line-height:1.5}
+a{color:#5eead4;font-weight:600}
 </style>
 </head>
 <body>
-<div id="box">
-  <div id="t">Zippee Command Center</div>
-  <div id="s">Loading v63 FIXED…</div>
+<div>
+<h1>Zippee Command Center v63 FIXED</h1>
+<p>Absent Riders + TATA 1MG Canter fixes are ready.</p>
+<p>Full dashboard file is available in the chat (download <b>v63_FIXED_slim.html</b>).</p>
+<p>Open that file directly in Chrome — it works offline / localStorage.</p>
+<p style="margin-top:20px;font-size:13px;opacity:.7">GitHub Pages loader is being finalized. Hard-refresh after next update.</p>
 </div>
-<script>
-(async function(){
-  var s=document.getElementById('s');
-  function fail(m){ s.textContent=m; s.className='err'; }
-  try{
-    if(!window.DecompressionStream){
-      fail('Browser gzip support missing. Use Chrome/Edge/Firefox latest.');
-      return;
-    }
-    var b64='';
-    var N=21;
-    for(var i=0;i<N;i++){
-      s.textContent='Downloading part '+(i+1)+'/'+N+'…';
-      var r=await fetch('p'+String(i).padStart(2,'0')+'.txt?v=632');
-      if(!r.ok) throw new Error('part '+i+' failed ('+r.status+')');
-      b64+=await r.text();
-    }
-    s.textContent='Decompressing…';
-    var bin=atob(b64);
-    var bytes=new Uint8Array(bin.length);
-    for(var j=0;j<bin.length;j++) bytes[j]=bin.charCodeAt(j);
-    var ds=new DecompressionStream('gzip');
-    var stream=new Blob([bytes]).stream().pipeThrough(ds);
-    var html=await new Response(stream).text();
-    s.textContent='Starting…';
-    document.open();
-    document.write(html);
-    document.close();
-  }catch(e){
-    fail('Load failed: '+e.message+' — hard refresh (Ctrl+Shift+R)');
-  }
-})();
-</script>
 </body>
 </html>
